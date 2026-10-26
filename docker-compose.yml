@@ -1,0 +1,25 @@
+services:
+  valheim:
+    image: lloesche/valheim-server
+    container_name: valheim
+    restart: unless-stopped
+    ports:
+      - "2456:2456/udp"
+      - "2457:2457/udp"
+      - "2458:2458/udp"
+    volumes:
+      - "C:/Servers/valheim/config:/config"
+      - "C:/Servers/valheim/data:/opt/valheim"
+    environment:
+      SERVER_NAME: "${SERVER_NAME}"
+      WORLD_NAME: "${WORLD_NAME}"
+      SERVER_PASS: "${SERVER_PASS}"
+      SERVER_PUBLIC: "false"
+      TZ: "${TZ}"
+      BACKUPS_CRON: "0 */6 * * *"
+      BACKUPS_MAX_AGE: "3"
+      UPDATE_INTERVAL: "900"
+      RESTART_CRON: "0 5 * * *"
+      # Optional: enables BepInEx so server-side mods can be dropped into
+      # C:\Servers\valheim\config\bepinex\plugins. Remove this line to run vanilla.
+      BEPINEX: "true"
