@@ -25,7 +25,7 @@ A write-up of how I built a headless Valheim dedicated server on an old Intel NU
 
 - Run Valheim on spare hardware, headless (no monitor or keyboard after setup).
 - Use Docker so the same machine can host other services later.
-- Stay on Windows (I'm not comfortable enough with Linux to want it as the host OS).
+- Stay on Windows.
 - No router port forwarding (my apartment network is restrictive).
 - Manage the box from anywhere without exposing remote desktop to the internet.
 
