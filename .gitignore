@@ -1,0 +1,14 @@
+# Secrets
+.env
+
+# World data, server files, logs, backups (large and may contain player IDs)
+config/
+data/
+*.db
+*.fwl
+*.zip
+stats.csv
+
+# Windows clutter
+Thumbs.db
+Desktop.ini
